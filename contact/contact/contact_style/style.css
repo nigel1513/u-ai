@@ -1,0 +1,31 @@
+/* Global styles for inputs, buttons, and submit button */
+input[type=text], input[type=email], input[type=phone_number], textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 20px; /* Add a top margin */
+  padding-bottom: 20px; /* Add padding to the bottom instead of using margin-bottom */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+button[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Adjust the height of the scroll area */
+section[data-testid='stSidebar'] > div {
+  max-height: calc(50vh - 10px); /* Subtracting 40px for the top and bottom margins */
+  overflow-y: auto; /* Enable vertical scrolling when content exceeds the height */
+  /* max-width: calc(30vw - 10px); */
+}
