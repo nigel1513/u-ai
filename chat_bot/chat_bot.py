@@ -7,8 +7,6 @@ from bardapi import BardCookies
 import bardapi
 import os
 
-#os.environ['_BARD_API_KEY'] = 'aQjofZfwHnmKfn_z4KoxSVc-LEvVTtKFJD1ViBEDkQgkBS1GN3xi_r1qe5NWsQTdzJGsvw.'
-#_BARD_API_KEY = os.environ['_BARD_API_KEY']
 
 
 def chat_bot():
