@@ -9,10 +9,7 @@ import os
 
 
 def chat_bot():
-   proxies = {
-   'http': 'http://127.0.0.1:7890',
-   'https': 'http://127.0.0.1:7890'
-   }
+  
     API_KEY = st.secrets["__Secure-1PSID"][0]
     API_KEY2 = st.secrets["__Secure-1PSIDTS"][0]
     API_KEY3 = st.secrets["__Secure-1PSIDCC"][0]
