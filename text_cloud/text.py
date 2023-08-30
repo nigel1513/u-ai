@@ -15,8 +15,6 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from collections import Counter
 import kss
-import matplotlib as mpl
-mpl.font_manager._rebuild()
 # 파일업로드 함수
  # Set cache expiration time (seconds)
 def load_dataframe(upload_file):
