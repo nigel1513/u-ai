@@ -31,3 +31,5 @@ xgboost==1.7.6
 scikit-image==0.19.2
 scikit-learn==1.0.1
 scikit-plot==0.3.7
+konlp==0.0.58
+konlpy==0.6.0
