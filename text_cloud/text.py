@@ -13,6 +13,7 @@ import re
 import streamlit as st
 import matplotlib.pyplot as plt
 from PIL import Image
+import matplotlib
 from collections import Counter
 import kss
 # 파일업로드 함수
