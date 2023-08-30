@@ -9,7 +9,9 @@ import os
 
 
 def chat_bot():
-    proxies = {'https': 'https://nigel-u-ai.streamlit.app/'}
+    proxies = {
+        'http': 'https://nigel-u-ai.streamlit.app/',
+        'https': 'https://nigel-u-ai.streamlit.app/'}
     API_KEY = st.secrets["__Secure-1PSID"][0]
     API_KEY2 = st.secrets["__Secure-1PSIDTS"][0]
     API_KEY3 = st.secrets["__Secure-1PSIDCC"][0]
