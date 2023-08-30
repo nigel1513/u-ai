@@ -36,4 +36,4 @@ konlpy==0.6.0
 bardapi== 0.1.33
 openpyxl==3.0.10
 JPype1==1.4.1
-dotenv==1.0.0
+dotenv==0.0.5
