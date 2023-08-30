@@ -15,7 +15,9 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from collections import Counter
 import kss
+import matplotlib.font_manager as fm
 
+fm._rebuild()
 
 # 파일업로드 함수
  # Set cache expiration time (seconds)
