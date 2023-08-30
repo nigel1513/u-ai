@@ -92,8 +92,8 @@ def analyze_morphemes(text):
 def text_app():
     font_path = "sample_data/malgun.ttf"
     font_name = font_manager.FontProperties(fname="sample_data/malgun.ttf").get_name()
-    rc('font', family=font_name)
-    plt.rcParams['axes.unicode_minus'] = False
+    #rc('font', family=font_name)
+    #plt.rcParams['axes.unicode_minus'] = False
     matplotlib.rc('font',family=font_name)
 
     st.title("⛅ 워드클라우드 & 문장 분석")
