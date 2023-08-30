@@ -15,11 +15,11 @@ def chat_bot():
     API_KEY3 = st.secrets["__Secure-1PSIDCC"][0]
     
 
-    cookie_dict = {"__Secure-1PSID":st.secrets["__Secure-1PSID"], "__Secure-1PSIDTS":st.secrets["__Secure-1PSIDTS"], "__Secure-1PSIDCC":st.secrets["__Secure-1PSIDCC"]}
+    cookie_dict = {"__Secure-1PSID":API_KEY, "__Secure-1PSIDTS":API_KEY2, "__Secure-1PSIDCC":API_KEY3}
 
     session = requests.Session()
     session.headers = SESSION_HEADERS
-    session.cookies.set("__Secure-1PSID", st.secrets["__Secure-1PSID"]) 
+    session.cookies.set("__Secure-1PSID", API_KEY) 
 
     #session = requests.Session()
     #session.headers = SESSION_HEADERS
