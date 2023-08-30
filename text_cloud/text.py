@@ -92,7 +92,7 @@ def analyze_morphemes(text):
     return morpheme_dict
 
 def text_app():
-    font_path = "sample_data/malgun.ttf"
+    font_path = "u-ai/sample_data/malgun.ttf"
     font_name = font_manager.FontProperties(fname="sample_data/malgun.ttf").get_name()
     rc('font', family=font_name)
     plt.rcParams['axes.unicode_minus'] = False
@@ -113,12 +113,12 @@ def text_app():
 
     if uploaded_files is not None:    
 
-        font_path = "sample_data/malgun.ttf"
-        font_name = font_manager.FontProperties(fname="sample_data/malgun.ttf").get_name()
+        font_path = "u-ai/sample_data/malgun.ttf"
+        font_name = font_manager.FontProperties(fname="u-ai/sample_data/malgun.ttf").get_name()
         rc('font', family=font_name)
         plt.rcParams['axes.unicode_minus'] = False
 
-        style_image_path = 'sample_data/asdf.png'
+        style_image_path = 'u-ai/sample_data/asdf.png'
         style_image = Image.open(style_image_path)
         style_image_array = np.array(style_image)
         df = load_dataframe(uploaded_files)
@@ -209,7 +209,7 @@ def text_app():
             #adjective_counts = pd.Series(adjective).value_counts()
 
             # 워드클라우드 생성
-            noun_wordcloud = WordCloud(max_font_size=150, font_path="sample_data/malgun.ttf", background_color="white", width=800,max_words=150,
+            noun_wordcloud = WordCloud(max_font_size=150, font_path="u-ai/sample_data/malgun.ttf", background_color="white", width=800,max_words=150,
             height=400, mask=style_image_array, colormap='magma', relative_scaling=0.5).generate_from_frequencies(noun_counts)
 
 
@@ -257,14 +257,14 @@ def text_app():
     else:
         sample_data = st.checkbox('샘플데이터 사용', value=True)
         if sample_data:
-            font_path = "sample_data/malgun.ttf"
-            font_name = font_manager.FontProperties(fname="sample_data/malgun.ttf").get_name()
+            font_path = "u-ai/sample_data/malgun.ttf"
+            font_name = font_manager.FontProperties(fname="u-ai/sample_data/malgun.ttf").get_name()
             rc('font', family=font_name)
             plt.rcParams['axes.unicode_minus'] = False
-            style_image_path = 'sample_data/asdf.png'
+            style_image_path = 'u-ai/sample_data/asdf.png'
             style_image = Image.open(style_image_path)
             style_image_array = np.array(style_image)
-            df = pd.read_excel('sample_data/asdf1.xlsx', engine='openpyxl')
+            df = pd.read_excel('u-ai/sample_data/asdf1.xlsx', engine='openpyxl')
 
             #df = pd.read_excel(uploaded_files, engine='openpyxl')
             st.success('파일업로드 완료', icon="🔥")
@@ -352,7 +352,7 @@ def text_app():
                 #adjective_counts = pd.Series(adjective).value_counts()
 
                 # 워드클라우드 생성
-                noun_wordcloud = WordCloud(max_font_size=150, font_path="sample_data/malgun.TTF", background_color="white", width=800,max_words=150,
+                noun_wordcloud = WordCloud(max_font_size=150, font_path="u-ai/sample_data/malgun.ttf", background_color="white", width=800,max_words=150,
                 height=400, mask=style_image_array, colormap='magma', relative_scaling=0.5).generate_from_frequencies(noun_counts)
 
 
