@@ -182,6 +182,10 @@ def text_app():
 
 
             for pos, counts in pos_counts.items():
+                font_path = "sample_data/malgun.ttf"
+                font_name = font_manager.FontProperties(fname="sample_data/malgun.ttf").get_name()
+                rc('font', family=font_name)
+                plt.rcParams['axes.unicode_minus'] = False
                 plt.figure(figsize=(10, 6))
                 counts = counts[counts.index != '']  # 빈값 제외
                 top_counts = counts[:10]  # 상위 10개만 선택
