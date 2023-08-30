@@ -92,8 +92,8 @@ def analyze_morphemes(text):
     return morpheme_dict
 
 def text_app():
-    font_path = "sample_data/malgun.TTF"
-    font_name = font_manager.FontProperties(fname="sample_data/malgun.TTF").get_name()
+    font_path = "sample_data/malgun.ttf"
+    font_name = font_manager.FontProperties(fname="sample_data/malgun.ttf").get_name()
     rc('font', family=font_name)
     plt.rcParams['axes.unicode_minus'] = False
 
