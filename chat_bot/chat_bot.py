@@ -13,7 +13,6 @@ def chat_bot():
     API_KEY = st.secrets["__Secure-1PSID"][0]
     API_KEY2 = st.secrets["__Secure-1PSIDTS"][0]
     API_KEY3 = st.secrets["__Secure-1PSIDCC"][0]
-    os.environ["__Secure-1PSID"] == API_KEY
 
     cookie_dict = {"__Secure-1PSID":API_KEY, "__Secure-1PSIDTS":API_KEY2, "__Secure-1PSIDCC":API_KEY3}
 
@@ -80,7 +79,8 @@ def chat_bot():
         with st.chat_message("user"):
             st.write(prompt)
 
-        bard = BardCookies(cookie_dict=cookie_dict, session=session, conversation_id=st.session_state.conversation_id)
+        bard = BardCookies(API_KEY, session=session, conversation_id=st.session_state.conversation_id)
+        #cookie_dict=cookie_dict
         response = bard.get_answer(prompt)
         st.write(response)
         #['choices'][0]['content'][0]
