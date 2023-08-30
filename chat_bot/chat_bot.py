@@ -13,8 +13,8 @@ def chat_bot():
     API_KEY = st.secrets["__Secure-1PSID"]
     API_KEY2 = st.secrets["__Secure-1PSIDTS"]
     API_KEY3 = st.secrets["__Secure-1PSIDCC"]
-
-    #st.write(API_KEY, API_KEY2, API_KEY3)
+    
+    st.write(API_KEY, API_KEY2, API_KEY3)
 
     cookie_dict = {"__Secure-1PSID":st.secrets["__Secure-1PSID"], "__Secure-1PSIDTS":st.secrets["__Secure-1PSIDTS"], "__Secure-1PSIDCC":st.secrets["__Secure-1PSIDCC"]}
 
