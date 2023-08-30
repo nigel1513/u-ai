@@ -78,9 +78,11 @@ def chat_bot():
         st.session_state.message.append({'role': "user", 'content': prompt})
         with st.chat_message("user"):
             st.write(prompt)
-        bard = BardCookies(cookie_dict=cookie_dict, session=session, conversation_id=st.session_state.conversation_id,timeout=10)
+        #bard = BardCookies(cookie_dict=cookie_dict, session=session, conversation_id=st.session_state.conversation_id,timeout=10)
         
         #response = bardapi.core.Bard(API_KEY).get_answer(prompt)
+
+        bard = Bard(timeout=10)
         response = bard.get_answer(prompt)
         #['choices'][0]['content'][0]
         st.write(response)
