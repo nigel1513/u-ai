@@ -1,6 +1,5 @@
 import requests
 import streamlit as st
-from dotenv import load_dotenv
 from bardapi.constants import SESSION_HEADERS
 from bardapi import Bard
 from bardapi import BardCookies
@@ -10,7 +9,6 @@ import os
 
 
 def chat_bot():
-    load_dotenv()
     
     API_KEY = st.secrets["__Secure-1PSID"]
     API_KEY2 = st.secrets["__Secure-1PSIDTS"]
