@@ -9,7 +9,10 @@ import os
 
 
 def chat_bot():
-   
+   proxies = {
+   'http': 'http://127.0.0.1:7890',
+   'https': 'http://127.0.0.1:7890'
+   }
     API_KEY = st.secrets["__Secure-1PSID"][0]
     API_KEY2 = st.secrets["__Secure-1PSIDTS"][0]
     API_KEY3 = st.secrets["__Secure-1PSIDCC"][0]
@@ -79,7 +82,7 @@ def chat_bot():
         st.session_state.message.append({'role': "user", 'content': prompt})
         with st.chat_message("user"):
             st.write(prompt)
-        bard = BardCookies(cookie_dict=cookie_dict, session=session, conversation_id=st.session_state.conversation_id, timeout=10)
+        bard = BardCookies(cookie_dict=cookie_dict, session=session, conversation_id=st.session_state.conversation_id, proxies=proxies)
         
         #response = bardapi.core.Bard(API_KEY).get_answer(prompt)
         response = bard.get_answer(prompt)
