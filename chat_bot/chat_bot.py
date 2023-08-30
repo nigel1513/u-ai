@@ -28,6 +28,7 @@ def chat_bot():
     session.cookies.set("__Secure-1PSIDCC", API_KEY3)
     # many models use triple hash '###' for keywords, Vicunas are simpler:
     
+    
     st.title("🤖 Chat-bot")
     
     st.write("\n")
