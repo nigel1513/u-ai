@@ -12,17 +12,17 @@ import os
 def chat_bot():
     load_dotenv()
     
-    API_KEY = os.getenv("__Secure-1PSID")
-    API_KEY2 = os.getenv("__Secure-1PSIDTS")
-    API_KEY3 = os.getenv("__Secure-1PSIDCC")
+    API_KEY = st.secrets["__Secure-1PSID"]
+    API_KEY2 = st.secrets["__Secure-1PSIDTS"]
+    API_KEY3 = st.secrets["__Secure-1PSIDCC"]
 
     #st.write(API_KEY, API_KEY2, API_KEY3)
 
-    cookie_dict = {"__Secure-1PSID":API_KEY, "__Secure-1PSIDTS":API_KEY2, "__Secure-1PSIDCC":API_KEY3}
+    cookie_dict = {"__Secure-1PSID":st.secrets["__Secure-1PSID"], "__Secure-1PSIDTS":st.secrets["__Secure-1PSIDTS"], "__Secure-1PSIDCC":st.secrets["__Secure-1PSIDCC"]}
 
     session = requests.Session()
     session.headers = SESSION_HEADERS
-    session.cookies.set("__Secure-1PSID", API_KEY) 
+    session.cookies.set("__Secure-1PSID", st.secrets["__Secure-1PSID"]) 
 
     #session = requests.Session()
     #session.headers = SESSION_HEADERS
