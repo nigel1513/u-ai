@@ -82,7 +82,7 @@ def chat_bot():
         
         #response = bardapi.core.Bard(API_KEY).get_answer(prompt)
 
-        bard = Bard(token=API_KEY, timeout=10)
+        bard = Bard(token_from_browser=True, timeout=10)
         response = bard.get_answer(prompt)
         #['choices'][0]['content'][0]
         st.write(response)
