@@ -37,7 +37,6 @@ def chat_bot():
     st.write("\n")
     st.write("\n")
 
-    st.write(API_KEY, API_KEY2, API_KEY3)
     
     st.info("해당 챗봇은 Google Bard API를 사용하였으며,  Google 정책에 따라 서비스가 종료될 수 있습니다.")
     st.warning("해당 챗봇은 테스트용으로 이전대화를 기록하지 않습니다.")
