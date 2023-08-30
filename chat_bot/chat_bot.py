@@ -10,7 +10,7 @@ import os
 
 def chat_bot():
     
-    API_KEY = st.secrets["__Secure-1PSID"]
+    API_KEY = st.secrets["__Secure-1PSID"][0]
     API_KEY2 = st.secrets["__Secure-1PSIDTS"][0]
     API_KEY3 = st.secrets["__Secure-1PSIDCC"][0]
 
