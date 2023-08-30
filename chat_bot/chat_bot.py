@@ -26,7 +26,6 @@ def chat_bot():
     #session.cookies.set("__Secure-1PSIDTS", cookie_dict["__Secure-1PSIDTS"])
     #session.cookies.set("__Secure-1PSIDCC", cookie_dict["__Secure-1PSIDCC"])
     # many models use triple hash '###' for keywords, Vicunas are simpler:
-    os.environ['__BARD_API_KEY'] = cookie_dict["__Secure-1PSID"]
     
     
     st.title("🤖 Chat-bot")
@@ -79,7 +78,7 @@ def chat_bot():
         st.session_state.message.append({'role': "user", 'content': prompt})
         with st.chat_message("user"):
             st.write(prompt)
-        bard = BardCookies(cookie_dict=cookie_dict, session=session, conversation_id=st.session_state.conversation_id)
+        bard = BardCookies(cookie_dict=cookie_dict, session=session, conversation_id=st.session_state.conversation_id,timeout=10)
         
         #response = bardapi.core.Bard(API_KEY).get_answer(prompt)
         response = bard.get_answer(prompt)
