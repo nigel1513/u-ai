@@ -17,15 +17,15 @@ def chat_bot():
 
     cookie_dict = {"__Secure-1PSID":API_KEY, "__Secure-1PSIDTS":API_KEY2, "__Secure-1PSIDCC":API_KEY3}
 
-    session = requests.Session()
-    session.headers = SESSION_HEADERS
-    session.cookies.set("__Secure-1PSID", API_KEY) 
-
     #session = requests.Session()
     #session.headers = SESSION_HEADERS
-    #session.cookies.set("__Secure-1PSID", API_KEY)
-    #session.cookies.set("__Secure-1PSIDTS", API_KEY2)
-    #session.cookies.set("__Secure-1PSIDCC", API_KEY3)
+    #session.cookies.set("__Secure-1PSID", API_KEY) 
+
+    session = requests.Session()
+    session.headers = SESSION_HEADERS
+    session.cookies.set("__Secure-1PSID", API_KEY)
+    session.cookies.set("__Secure-1PSIDTS", API_KEY2)
+    session.cookies.set("__Secure-1PSIDCC", API_KEY3)
     # many models use triple hash '###' for keywords, Vicunas are simpler:
     
     st.title("🤖 Chat-bot")
