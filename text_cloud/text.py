@@ -15,8 +15,6 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from collections import Counter
 import kss
-import matplotlib 
-matplotlib.font_manager._rebuild()
 # 파일업로드 함수
  # Set cache expiration time (seconds)
 def load_dataframe(upload_file):
@@ -96,6 +94,7 @@ def text_app():
     font_name = font_manager.FontProperties(fname="sample_data/malgun.ttf").get_name()
     rc('font', family=font_name)
     plt.rcParams['axes.unicode_minus'] = False
+    plt.rcParams['font.family'] = 'NanumGothic'
 
     st.title("⛅ 워드클라우드 & 문장 분석")
     st.write("\n")
