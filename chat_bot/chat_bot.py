@@ -80,7 +80,9 @@ def chat_bot():
             st.write(prompt)
 
         bard = BardCookies(cookie_dict=cookie_dict, session=session, conversation_id=st.session_state.conversation_id)
-        response = bard.get_answer(prompt)['choices'][0]['content'][0]
+        response = bard.get_answer(prompt)
+        st.write(response)
+        #['choices'][0]['content'][0]
 
         st.session_state.message.append({"role": 'assistant', 'content': response})
 
