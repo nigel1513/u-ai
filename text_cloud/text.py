@@ -113,10 +113,7 @@ def text_app():
 
     if uploaded_files is not None:    
 
-        font_path = "sample_data/malgun.ttf"
-        font_name = font_manager.FontProperties(fname="sample_data/malgun.ttf").get_name()
-        rc('font', family=font_name)
-        plt.rcParams['axes.unicode_minus'] = False
+       
 
         style_image_path = 'sample_data/asdf.png'
         style_image = Image.open(style_image_path)
@@ -183,10 +180,7 @@ def text_app():
 
 
             for pos, counts in pos_counts.items():
-                font_path = "sample_data/malgun.ttf"
-                font_name = font_manager.FontProperties(fname="sample_data/malgun.ttf").get_name()
-                rc('font', family=font_name)
-                plt.rcParams['axes.unicode_minus'] = False
+                
                 plt.figure(figsize=(10, 6))
                 counts = counts[counts.index != '']  # 빈값 제외
                 top_counts = counts[:10]  # 상위 10개만 선택
@@ -261,10 +255,7 @@ def text_app():
     else:
         sample_data = st.checkbox('샘플데이터 사용', value=True)
         if sample_data:
-            font_path = "sample_data/malgun.ttf"
-            font_name = font_manager.FontProperties(fname="sample_data/malgun.ttf").get_name()
-            rc('font', family=font_name)
-            plt.rcParams['axes.unicode_minus'] = False
+          
             style_image_path = 'sample_data/asdf.png'
             style_image = Image.open(style_image_path)
             style_image_array = np.array(style_image)
