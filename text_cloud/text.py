@@ -94,7 +94,7 @@ def text_app():
     font_name = font_manager.FontProperties(fname="sample_data/malgun.ttf").get_name()
     rc('font', family=font_name)
     plt.rcParams['axes.unicode_minus'] = False
-    plt.rcParams['font.family'] = 'NanumGothic'
+    matplotlib.rc('font',family=font_name)
 
     st.title("⛅ 워드클라우드 & 문장 분석")
     st.write("\n")
