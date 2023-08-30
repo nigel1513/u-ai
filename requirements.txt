@@ -33,7 +33,6 @@ scikit-learn==1.0.1
 scikit-plot==0.3.7
 konlp==0.0.58
 konlpy==0.6.0
-bardapi==0.1.23a
-# 0.1.33
+bardapi== 0.1.33
 openpyxl==3.0.10
 JPype1==1.4.1
