@@ -16,6 +16,9 @@ def chat_bot():
 
     cookie_dict = {"__Secure-1PSID":API_KEY, "__Secure-1PSIDTS":API_KEY2, "__Secure-1PSIDCC":API_KEY3}
     st.write(API_KEY)
+    st.write(API_KEY2)
+    st.write(API_KEY3)
+    
     st.write(cookie_dict)
     #session = requests.Session()
     #session.headers = SESSION_HEADERS
