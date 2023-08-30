@@ -82,7 +82,7 @@ def chat_bot():
         bard = BardCookies(cookie_dict=cookie_dict, session=session, conversation_id=st.session_state.conversation_id)
         
         #response = bardapi.core.Bard(API_KEY).get_answer(prompt)
-        rsponse = bard.get_answer(prompt)
+        response = bard.get_answer(prompt)
         #['choices'][0]['content'][0]
         st.write(response)
         #
