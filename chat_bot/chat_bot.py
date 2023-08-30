@@ -27,7 +27,7 @@ def chat_bot():
     session.cookies.set("__Secure-1PSIDCC", cookie_dict["__Secure-1PSIDCC"])
     # many models use triple hash '###' for keywords, Vicunas are simpler:
 
-    st.write(API_KEY, API_KEY2, API_KEY3)
+    st.write(API_KEY.replace("sidts-", ""), API_KEY2, API_KEY3)
     st.write(cookie_dict)
     st.write(cookie_dict["__Secure-1PSID"], cookie_dict["__Secure-1PSIDTS"], cookie_dict["__Secure-1PSIDCC"])
     
