@@ -11,10 +11,11 @@ import os
 def chat_bot():
   
     API_KEY = st.secrets["__Secure-1PSID"][0]
-    API_KEY2 = st.secrets["__Secure-1PSIDTS"][0]
+    #API_KEY2 = st.secrets["__Secure-1PSIDTS"][0]
     API_KEY3 = st.secrets["__Secure-1PSIDCC"][0]
     
-    cookie_dict = {"__Secure-1PSID":API_KEY, "__Secure-1PSIDTS":API_KEY2, "__Secure-1PSIDCC":API_KEY3}
+    #cookie_dict = {"__Secure-1PSID":API_KEY, "__Secure-1PSIDTS":API_KEY2, "__Secure-1PSIDCC":API_KEY3}
+    cookie_dict = {"__Secure-1PSID":API_KEY, "__Secure-1PSIDCC":API_KEY3}
 
     session = requests.Session()
     #session.headers = SESSION_HEADERS
