@@ -94,7 +94,7 @@ def chat_bot():
         
         #response = bardapi.core.Bard(API_KEY).get_answer(prompt)
 
-        response = bard.get_answer(prompt)
+        response = bard.get_answer(prompt, timeout=10)
         #['choices'][0]['content'][0]
         st.write(response)
         #
