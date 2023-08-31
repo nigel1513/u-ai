@@ -11,28 +11,30 @@ import os
 def chat_bot():
   
     API_KEY = st.secrets["__Secure-1PSID"][0]
-    #API_KEY2 = st.secrets["__Secure-1PSIDTS"][0]
+    API_KEY2 = st.secrets["__Secure-1PAPISID"][0]
     API_KEY3 = st.secrets["__Secure-1PSIDCC"][0]
+
+    API_KEY4 = st.secrets["__Secure-3PSID"][0]
+    API_KEY5 = st.secrets["__Secure-3PAPISID"][0]
+    API_KEY6 = st.secrets["__Secure-3PSIDCC"][0]
+  
+    #API_KEY2 = st.secrets["__Secure-1PSIDTS"][0]
     
     #cookie_dict = {"__Secure-1PSID":API_KEY, "__Secure-1PSIDTS":API_KEY2, "__Secure-1PSIDCC":API_KEY3}
-    cookie_dict = {"__Secure-1PSID":API_KEY, "__Secure-1PSIDCC":API_KEY3}
+    #cookie_dict = {"__Secure-1PSID":API_KEY, "__Secure-1PSIDCC":API_KEY3}
 
     session = requests.Session()
     #session.headers = SESSION_HEADERS
     session.cookies.set("__Secure-1PSID", API_KEY) 
-    session.headers = {
-        "Host": "bard.google.com",
-        "X-Same-Domain": "1",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.4472.114 Safari/537.36",
-        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-        "Origin": "https://bard.google.com",
-        "Referer": "https://bard.google.com/",
-     }  
-    #session = requests.Session()
-    #session.headers = SESSION_HEADERS
-    #session.cookies.set("__Secure-1PSID", cookie_dict["__Secure-1PSID"])
-    #session.cookies.set("__Secure-1PSIDTS", cookie_dict["__Secure-1PSIDTS"])
-    #session.cookies.set("__Secure-1PSIDCC", cookie_dict["__Secure-1PSIDCC"])
+  
+    session = requests.Session()
+    session.headers = SESSION_HEADERS
+    session.cookies.set("__Secure-1PSID", API_KEY)
+    session.cookies.set("__Secure-1PAPISID", API_KEY2)
+    session.cookies.set("__Secure-1PSIDCC", API_KEY3)
+    session.cookies.set("__Secure-3PSID", API_KEY4)
+    session.cookies.set("__Secure-3PAPISID", API_KEY5)
+    session.cookies.set("__Secure-3PSIDCC", API_KEY6)
     # many models use triple hash '###' for keywords, Vicunas are simpler:
     
     
@@ -86,7 +88,8 @@ def chat_bot():
         st.session_state.message.append({'role': "user", 'content': prompt})
         with st.chat_message("user"):
             st.write(prompt)
-        bard = BardCookies(cookie_dict=cookie_dict, session=session, conversation_id=st.session_state.conversation_id)
+        bard = Bard(token=API_KEY, session=session)
+        #bard = BardCookies(cookie_dict=cookie_dict, session=session, conversation_id=st.session_state.conversation_id)
         #bard = Bard(token_from_browser=True)
         
         #response = bardapi.core.Bard(API_KEY).get_answer(prompt)
