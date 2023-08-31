@@ -25,7 +25,7 @@ def chat_bot():
 
     session = requests.Session()
     #session.headers = SESSION_HEADERS
-    session.cookies.set("__Secure-1PSID", API_KEY) 
+    #session.cookies.set("__Secure-1PSID", API_KEY) 
   
     session = requests.Session()
     session.headers = SESSION_HEADERS
