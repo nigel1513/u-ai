@@ -17,9 +17,16 @@ def chat_bot():
     cookie_dict = {"__Secure-1PSID":API_KEY, "__Secure-1PSIDTS":API_KEY2, "__Secure-1PSIDCC":API_KEY3}
 
     session = requests.Session()
-    session.headers = SESSION_HEADERS
+    #session.headers = SESSION_HEADERS
     session.cookies.set("__Secure-1PSID", API_KEY) 
-
+    session.headers = {
+        "Host": "bard.google.com",
+        "X-Same-Domain": "1",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.4472.114 Safari/537.36",
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        "Origin": "https://bard.google.com",
+        "Referer": "https://bard.google.com/",
+     }  
     #session = requests.Session()
     #session.headers = SESSION_HEADERS
     #session.cookies.set("__Secure-1PSID", cookie_dict["__Secure-1PSID"])
@@ -78,7 +85,7 @@ def chat_bot():
         st.session_state.message.append({'role': "user", 'content': prompt})
         with st.chat_message("user"):
             st.write(prompt)
-        bard = BardCookies(cookie_dict=cookie_dict, session=session, conversation_id=st.session_state.conversation_id)
+        bard = BardCookies(cookie_dict=cookie_dict, session=session, conversation_id=st.session_state.conversation_id, timeout=30)
         #bard = Bard(token_from_browser=True)
         
         #response = bardapi.core.Bard(API_KEY).get_answer(prompt)
