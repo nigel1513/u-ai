@@ -16,7 +16,13 @@ from PIL import Image
 import matplotlib
 from collections import Counter
 import kss
+import matplotlib.font_manager as fm
+
+
 # 파일업로드 함수
+
+fm.fontManager.addfont("sample_data/malgun.ttf")
+fm._load_fontmanager(try_read_cache=False)
  # Set cache expiration time (seconds)
 def load_dataframe(upload_file):
     try:
