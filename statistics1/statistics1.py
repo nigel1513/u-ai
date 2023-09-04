@@ -110,9 +110,11 @@ def statistics_app():
             st.markdown("---")
             # pandas profiling 사용 시 주석 제거
             st.subheader("4. Pandas Profiling으로 데이터 확인하기")
-            st.info('컬럼별 자세한 내용은 Toggle Details를 눌러주세요', icon="🔥")
-            pr = df.profile_report()
-            st_profile_report(pr)             
+            st.info('리소스 제한으로 인한 임시 접근제어 중', icon="🔥")
+
+            #st.info('컬럼별 자세한 내용은 Toggle Details를 눌러주세요', icon="🔥")
+            #pr = df.profile_report()
+            #st_profile_report(pr)             
 
         else:
             st.error("데이터를 넣어주세요.")
