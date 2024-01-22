@@ -265,7 +265,7 @@ def text_app():
             style_image_path = 'sample_data/asdf.png'
             style_image = Image.open(style_image_path)
             style_image_array = np.array(style_image)
-            df = pd.read_excel('sample_data/asdf1.xlsx', engine='openpyxl')
+            df = pd.read_excel('sample_data/asdf2.xlsx', engine='openpyxl')
 
             #df = pd.read_excel(uploaded_files, engine='openpyxl')
             st.success('파일업로드 완료', icon="🔥")
